@@ -1,6 +1,9 @@
 {
   "name": "mathsolver",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "Its a Math Solver",
   "main": "app.js",
   "devDependencies": {},
