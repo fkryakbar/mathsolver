@@ -18,7 +18,7 @@ app.get('/query', (req, res) => {
       if(queryresult.success) {
         const output = pods.map((pod) => {
           const subpodContent = pod.subpods.map(subpod =>
-            `  <img style="max-width: 400px;" src="${subpod.img.src}" alt="${subpod.img.alt}">`
+            `  <img style="max-width: 300px;" src="${subpod.img.src}" alt="${subpod.img.alt}">`
           ).join('\n');
           return `<h4>${pod.title}</h4>\n${subpodContent}`;
         }).join('\n <hr>');
