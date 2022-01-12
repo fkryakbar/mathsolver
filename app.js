@@ -22,10 +22,10 @@ app.get('/query', (req, res) => {
           ).join('\n');
           return `<h4>${pod.title}</h4>\n${subpodContent}`;
         }).join('\n <hr>');
-        res.render("result", {output : output})
+        res.render("result", {output : output, input : req.query.result}})
       } else {
         res.status(404)
-        res.render("result", {output : `<h4>Can not solve "${req.query.result}"</h4>`})
+        res.render("result", {output : `<h4>Can not solve "${req.query.result}"</h4>`, input : req.query.result}})
       }
     }).catch(console.error);
 
