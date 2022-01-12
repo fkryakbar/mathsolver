@@ -22,13 +22,13 @@
         <h2>Math Solver</h2>
         <form action="" method="get" autocomplete="off">
             <div class="input-group mb-3"> 
-                <input type="text" name="result" class="form-control" placeholder="Enter a Question" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input value="<%= input %>" type="text" name="result" class="form-control" placeholder="Enter a Question" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-primary" type="submit" id="button-addon2">Solve</button>
                 
             </div>
         </form>
         <div class="answer">
-            <h6>Result :</h6>
+            <h6>Result : <%= input %></h6>
             <hr>
             <%- output %> 
             <div class="text-center mt-3">
